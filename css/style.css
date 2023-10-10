@@ -6,7 +6,7 @@
   --violet-100: #f3e8ff;
   --violet-200: #e9d5ff;
   --violet-300: #d8b4fe;
-  --violet-400: #c084fc;
+  --violet-400: #c185fc;
   --violet-500: #a855f7;
   --violet-600: #9333ea;
   --violet-700: #7e22ce;
@@ -58,6 +58,22 @@ html {
   background-color: var(--violet-950);
 }
 
+.card {
+  background: linear-gradient(
+    to bottom right,
+    var(--violet-800),
+    var(--violet-700)
+  );
+  box-shadow: 0 0 15px rgba(20, 20, 20, 0.4);
+  border-radius: 8px;
+  margin: 0 1rem;
+}
+
+div[class$="summary"] {
+  opacity: 0.8;
+  overflow: auto;
+}
+
 img.icon-light {
   filter: brightness(0) saturate(100%) invert(100%) sepia(38%) saturate(3364%)
     hue-rotate(187deg) brightness(110%) contrast(103%);
@@ -92,22 +108,20 @@ ul {
   list-style-type: none;
 }
 
-ul li a {
+a {
   text-decoration: none;
   color: inherit;
 }
 
 /* main styles - mobile first */
 body {
-  background: linear-gradient(to bottom, var(--violet-900), var(--violet-950));
-  background-repeat: no-repeat;
   color: var(--violet-050);
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.5rem;
+  gap: 5px;
 }
 
 /* header section styles ------------------------------------------------------*/
@@ -229,9 +243,79 @@ body {
 
 /* side nav styles ------------------------------------------------------------*/
 .side-nav {
-  background-color: var(--violet-900);
 }
 /* main section styles --------------------------------------------------------*/
 .main {
-  background-color: var(--violet-950);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 50px;
+}
+
+.section-header {
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 2px solid var(--violet-050);
+  border-bottom: 2px solid var(--violet-050);
+  padding: 1rem 0;
+  background-color: rgba(250, 245, 255, 0.2);
+}
+
+/* project section */
+.main .projects-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-auto-rows: 250px;
+  gap: 1.5rem;
+}
+
+.projects-section .project {
+  padding: 1.5rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 40px;
+  gap: 5px;
+  border-left: 6px solid var(--violet-200);
+}
+
+.project .project-header {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+
+.project .project-summary {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  background-color: var(--violet-600);
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(250, 245, 255, 0.2) inset;
+}
+
+.project .project-action-buttons {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-action-buttons .fav-icon {
+  width: 28px;
+}
+
+.project-action-buttons .share-icon {
+  width: 24px;
+  transform: translateY(1px);
+}
+
+/* announcements section */
+
+.main .announcements-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
 }
