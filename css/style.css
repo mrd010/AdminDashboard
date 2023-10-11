@@ -314,6 +314,19 @@ body {
   transform: translateY(1px);
 }
 
+.project .project-action-buttons .fav-button img {
+  transition: opacity 0.1s ease;
+  opacity: 0.4;
+}
+
+.project .project-action-buttons .fav-button:hover img {
+  opacity: 0.7;
+}
+
+.project .project-action-buttons button.on img.icon-light {
+  opacity: 1;
+}
+
 /* announcements section */
 
 .main .announcements-section {
