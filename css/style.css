@@ -67,8 +67,11 @@ html {
   border-top: 2px solid var(--violet-050);
   border-bottom: 2px solid var(--violet-050);
   padding: 0.8rem 0;
-  background-color: rgba(250, 245, 255, 0.9);
+  background-color: var(--violet-100);
   color: var(--violet-950);
+  position: sticky;
+  top: 65px;
+  z-index: 1;
 }
 
 .card {
@@ -147,20 +150,26 @@ body {
 /* header section styles ------------------------------------------------------*/
 .header {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px auto;
   gap: 0.5rem;
-  background: linear-gradient(to bottom, var(--violet-800), var(--violet-950));
+
   background-repeat: no-repeat;
   padding: 0.5rem 0;
 }
 
 /* top header */
 .header .top-header {
-  padding: 0.6rem 1rem;
+  background: linear-gradient(to bottom, var(--violet-800), var(--violet-950));
+  padding: 0.8rem 1rem;
   display: grid;
   grid-template-columns: var(--button-icon-size) 1fr;
   align-items: center;
   gap: 1rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
 }
 
 .top-header .search {
@@ -205,6 +214,7 @@ body {
 
 /* bottom header */
 .header .bottom-header {
+  grid-row: 2 / 3;
   display: grid;
   grid-template-columns: 1fr auto auto auto;
   justify-content: end;
