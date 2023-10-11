@@ -64,8 +64,6 @@ html {
 .section-header {
   text-align: center;
   text-transform: uppercase;
-  border-top: 2px solid var(--violet-050);
-  border-bottom: 2px solid var(--violet-050);
   padding: 0.8rem 0;
   background-color: var(--violet-100);
   color: var(--violet-950);
@@ -529,4 +527,60 @@ div.blurred {
 .side-nav .nav-menu-utilities .nav-link {
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+/* design for tablet */
+@media only screen and (min-width: 481px) {
+  :root {
+    --button-icon-size: 40px;
+    --nav-icon-size: 56px;
+    --profile-img-size: 70px;
+    --trend-img-size: 56px;
+  }
+  header.header {
+    grid-template-rows: 60px auto;
+  }
+
+  .main section.projects-section {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-rows: 250px;
+    row-gap: 1.5rem;
+    column-gap: 0;
+  }
+
+  div.section-header {
+    grid-column: 1 / -1;
+  }
+
+  div.card {
+    box-shadow: 0 0 5px rgba(20, 20, 20, 0.4);
+    border-radius: 8px;
+    margin: 0 2rem;
+  }
+
+  div.announcements {
+    margin: 0 4rem;
+  }
+
+  .main div.trending {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 0;
+    margin: 0 2rem;
+  }
+
+  .header div.bottom-header {
+    gap: 1.2rem;
+    margin-right: 2rem;
+  }
+
+  div.profile {
+    width: min(50%, 300px);
+    margin-right: 2rem;
+  }
+
+  .side-nav {
+    width: 320px;
+  }
 }
