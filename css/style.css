@@ -49,6 +49,8 @@ input[type="search"]::-webkit-search-results-decoration {
 /* utilities */
 .no-wrap {
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* general styles */
@@ -232,7 +234,7 @@ body {
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
   background-color: var(--violet-700);
-  padding: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
   margin-right: 1rem;
 }
 
@@ -251,12 +253,14 @@ body {
 .profile .profile-status {
   font-size: 0.8rem;
   padding: 0.2rem;
+  max-width: 100%;
 }
 
 .profile .profile-name {
   font-size: 1rem;
   padding: 0.2rem;
   font-weight: 600;
+  max-width: 100%;
 }
 
 /* main section styles --------------------------------------------------------*/
