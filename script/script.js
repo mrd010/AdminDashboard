@@ -21,6 +21,7 @@ const closeBtn = sideMenu.querySelector(".close-button");
 let sideMenuIsOpen = false;
 
 // side menu on mobile close side menu with close button
+
 closeBtn.addEventListener("click", closeMenu);
 
 sideMenuBackdrop.addEventListener("click", (e) => {
